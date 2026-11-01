@@ -2826,7 +2826,7 @@ spec:
                     type: boolean
                 type: object
               version:
-                default: v16.5.0
+                default: v17.1.0
                 description: |-
                   Version is informational in the certified build: the six Axera images are
                   digest-pinned in the bundle's relatedImages, so the operand version moves by

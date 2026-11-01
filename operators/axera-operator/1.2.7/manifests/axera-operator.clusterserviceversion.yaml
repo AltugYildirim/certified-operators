@@ -59,7 +59,7 @@ metadata:
                 "enabled": true
               }
             },
-            "version": "v16.5.0"
+            "version": "v17.1.0"
           }
         },
         {
@@ -150,8 +150,8 @@ metadata:
     features.operators.openshift.io/cnf: "false"
     features.operators.openshift.io/cni: "false"
     features.operators.openshift.io/csi: "false"
-    containerImage: quay.io/axera/axera-operator@sha256:7d581d497bc7614604b9f0fac68ad1f933223451de5d1de947419a26555083ed
-    createdAt: "2026-10-31T13:41:12Z"
+    containerImage: quay.io/axera/axera-operator@sha256:2195a30be9bc1ff0a9561996d2ec5d7f7dbd202f5ccb5154ba77f3258cd47f7d
+    createdAt: "2026-11-01T11:25:25Z"
     description: Deploy and lifecycle-manage the Axera Kubernetes microsegmentation
       & NDR platform on OpenShift through a single Axera custom resource.
     operators.operatorframework.io/builder: operator-sdk-v1.42.3
@@ -766,7 +766,7 @@ spec:
                     fieldRef:
                       fieldPath: spec.serviceAccountName
                 # quay.io/axera/axera-operator:v1.2.7, pinned by digest (RELEASE-1.2.7.md, release steps)
-                image: quay.io/axera/axera-operator@sha256:7d581d497bc7614604b9f0fac68ad1f933223451de5d1de947419a26555083ed
+                image: quay.io/axera/axera-operator@sha256:2195a30be9bc1ff0a9561996d2ec5d7f7dbd202f5ccb5154ba77f3258cd47f7d
                 livenessProbe:
                   httpGet:
                     path: /healthz
@@ -870,19 +870,19 @@ spec:
     # image and the containerImage annotation). Until the image is pushed the digest is a marked
     # placeholder; the release step writes the pushed digest into all three (RELEASE-1.2.7.md).
     - name: axera-operator
-      image: quay.io/axera/axera-operator@sha256:7d581d497bc7614604b9f0fac68ad1f933223451de5d1de947419a26555083ed
+      image: quay.io/axera/axera-operator@sha256:2195a30be9bc1ff0a9561996d2ec5d7f7dbd202f5ccb5154ba77f3258cd47f7d
     - name: microsegmentation-api
-      image: quay.io/axera/microsegmentation-api@sha256:4626216dfc1465c27ed2772665afd6d6e0779990d590a31c602848b065394560
+      image: quay.io/axera/microsegmentation-api@sha256:62e49d71690421ff492f83099a479dad1eaf5e5e9217d1a9fa4c059fe4c15634
     - name: microsegmentation-radar
-      image: quay.io/axera/microsegmentation-radar@sha256:adfb5dbe404a0dc75ff5ee3456235b0a49959cab10f6149ac1eef794593d5c61
+      image: quay.io/axera/microsegmentation-radar@sha256:98414edbc5f52f441bae19007ef87018b4fba4f1979fe5f3dc19edd3603ab5d1
     - name: microsegmentation-allowdropmonitor
-      image: quay.io/axera/microsegmentation-allowdropmonitor@sha256:ab0b32130c7b1696f4f465f279c7e0d1fe242cad70762111dda9f1b9d961975f
+      image: quay.io/axera/microsegmentation-allowdropmonitor@sha256:141e99e76b2297b9419b71c5fb4b26535e4b64ea79e5f9913a0490eb79676600
     - name: microsegmentation-networkpolicywatcher
-      image: quay.io/axera/microsegmentation-networkpolicywatcher@sha256:4680030c8ce6dda37668114bcbc23c459e86c905688446a0e02470c6e6062ace
+      image: quay.io/axera/microsegmentation-networkpolicywatcher@sha256:bd2a6f4326859ec956feda5fb7e314d977574dd661eabf7e00dcdf11ce786e7e
     - name: microsegmentation-frontend
-      image: quay.io/axera/microsegmentation-frontend@sha256:7e27bd11441686834e498139b544ecad2a3692dc2f460f50b3a97395afd5f73e
+      image: quay.io/axera/microsegmentation-frontend@sha256:005d16d2a3ef36cb22102aa08b52e2a9df01ea5ed660194d0c373ac9ea11429a
     - name: microsegmentation-mcp
-      image: quay.io/axera/microsegmentation-mcp@sha256:aff996d5dda117bcd640e45a0b7f9d3860204b3011c1d7259ef92faa42ed2c45
+      image: quay.io/axera/microsegmentation-mcp@sha256:2f978d46f3ad8a3eb80aab0daa1ac7e73b00c895491faef19b87c3ebe9b1ea20
     - name: kafka
       image: quay.io/axera/kafka@sha256:821720633cf189f4852051569f0794ffbb3aeef3de9e5b47684901af81176852
     - name: microsegmentation-ollama
